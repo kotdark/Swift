@@ -2,7 +2,9 @@
 
 import UIKit
 
-var array = ["one","two","three","four"]for element in array {    println(element)
+var array = ["one","two","three","four"]
+for element in array {
+    print(element)
 }
 
 
@@ -18,7 +20,7 @@ func example1(integers: NSArray) {
     number += (element as! NSNumber).integerValue
     }
     
-    println("Sum all array items: \(number)")
+    print("Sum all array items: \(number)")
     
     
 }
@@ -69,7 +71,7 @@ func example3()  {
     
 }
 
-
+var array4 = example3()
 
 
 
