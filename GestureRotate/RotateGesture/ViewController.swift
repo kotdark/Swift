@@ -20,11 +20,10 @@ class ViewController: UIViewController {
     
     var netRotation:CGFloat = 0
     
-    
     @IBOutlet weak var image: UIImageView!
     
     override func viewDidLoad() {
-        var rotateGesture = UIRotationGestureRecognizer(target: self,
+        let rotateGesture = UIRotationGestureRecognizer(target: self,
             action: "rotateGesture:")
         image.addGestureRecognizer(rotateGesture)
         super.viewDidLoad()
@@ -37,15 +36,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func rotateGesture(sender : UIRotationGestureRecognizer) {
-        var rotation:CGFloat = sender.rotation
-        var transform:CGAffineTransform  =
+        let rotation:CGFloat = sender.rotation
+        let transform:CGAffineTransform  =
         CGAffineTransformMakeRotation(rotation + netRotation)
         sender.view?.transform = transform
         if (sender.state == UIGestureRecognizerState.Ended){
             netRotation += rotation;
         }
     }
-    
     
 }
 

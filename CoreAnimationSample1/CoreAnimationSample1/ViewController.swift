@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         
         let animation:CABasicAnimation = CABasicAnimation(keyPath: "position")
         animation.fromValue = NSValue(CGPoint:CGPointMake(image.frame.midX, image.frame.midY))
-        animation.toValue = NSValue(CGPoint:CGPointMake(image.frame.midX, 340))
+        animation.toValue = NSValue(CGPoint:CGPointMake(image.frame.midX, image.frame.midY + 100))
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         animation.duration = 1.0
         image.layer.addAnimation(animation, forKey: "position")

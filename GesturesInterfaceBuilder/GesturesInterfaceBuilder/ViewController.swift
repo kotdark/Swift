@@ -56,7 +56,7 @@ class ViewController: UIViewController {
     
     func alert(myString: String){
         
-        var myAlertView = UIAlertView()
+        let myAlertView = UIAlertView()
         
         myAlertView.title = "Alert"
         myAlertView.message = myString
